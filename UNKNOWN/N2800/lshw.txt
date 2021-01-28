@@ -1,0 +1,286 @@
+agent
+    description: Desktop Computer
+    product: To Be Filled By O.E.M.
+    vendor: To Be Filled By O.E.M.
+    version: To Be Filled By O.E.M.
+    serial: To Be Filled By O.E.M.
+    width: 4294967295 bits
+    capabilities: smbios-2.7 dmi-2.7 smp vsyscall32
+    configuration: boot=normal chassis=desktop uuid=00020003-0004-0005-0006-000700080009
+  *-core
+       description: Motherboard
+       vendor: S99-ON2800-JW001
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: American Megatrends Inc.
+          physical id: 0
+          version: 4.6.5
+          date: 07/12/2012
+          size: 64KiB
+          capacity: 960KiB
+          capabilities: pci upgrade shadowing cdboot bootselect socketedrom edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb biosbootspecification uefi
+     *-cpu
+          description: CPU
+          product: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+          vendor: Intel Corp.
+          physical id: 4
+          bus info: cpu@0
+          version: Intel(R) Atom(TM) CPU N2800   @ 1.86GHz
+          serial: To Be Filled By O.E.M.
+          slot: CPU 1
+          size: 934MHz
+          capacity: 1865MHz
+          width: 64 bits
+          clock: 533MHz
+          capabilities: x86-64 fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx constant_tsc arch_perfmon pebs bts nopl nonstop_tsc cpuid aperfmperf pni dtes64 monitor ds_cpl est tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm dtherm arat cpufreq
+          configuration: cores=2 enabledcores=1 threads=2
+        *-cache:0
+             description: L1 cache
+             physical id: 5
+             slot: L1-Cache
+             size: 24KiB
+             capacity: 24KiB
+             capabilities: internal write-back unified
+             configuration: level=1
+        *-cache:1
+             description: L2 cache
+             physical id: 6
+             slot: L2-Cache
+             size: 512KiB
+             capacity: 512KiB
+             capabilities: internal varies unified
+             configuration: level=2
+     *-memory
+          description: System Memory
+          physical id: 28
+          slot: System board or motherboard
+          size: 4GiB
+        *-bank:0
+             description: SODIMM [empty]
+             product: [Empty]
+             vendor: [Empty]
+             physical id: 0
+             serial: [Empty]
+             slot: DIMM0
+        *-bank:1
+             description: SODIMM DDR3 Synchronous 1066 MHz (0.9 ns)
+             product: RMT3170EB68F9W16
+             vendor: 67
+             physical id: 1
+             serial: 05151418
+             slot: DIMM1
+             size: 4GiB
+             width: 64 bits
+             clock: 1066MHz (0.9ns)
+     *-pci
+          description: Host bridge
+          product: Atom Processor D2xxx/N2xxx DRAM Controller
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 03
+          width: 32 bits
+          clock: 33MHz
+        *-display
+             description: VGA compatible controller
+             product: Atom Processor D2xxx/N2xxx Integrated Graphics Controller
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 09
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm msi vga_controller bus_master cap_list rom
+             configuration: driver=gma500 latency=0
+             resources: irq:28 memory:dfd00000-dfdfffff ioport:f100(size=8) memory:c0000-dffff
+        *-pci:0
+             description: PCI bridge
+             product: NM10/ICH7 Family PCI Express Port 1
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:24 ioport:2000(size=4096) memory:c0000000-c01fffff ioport:c0200000(size=2097152)
+        *-pci:1
+             description: PCI bridge
+             product: NM10/ICH7 Family PCI Express Port 3
+             vendor: Intel Corporation
+             physical id: 1c.2
+             bus info: pci@0000:00:1c.2
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:25 ioport:e000(size=4096) memory:dfe00000-dfefffff ioport:c0400000(size=2097152)
+           *-network
+                description: Ethernet interface
+                product: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: enp2s0
+                version: 06
+                serial: 00:e0:66:59:8b:9d
+                size: 1Gbit/s
+                capacity: 1Gbit/s
+                width: 64 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress msix vpd bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt 1000bt-fd autonegotiation
+                configuration: autonegotiation=on broadcast=yes driver=r8169 duplex=full firmware=rtl8168e-3_0.0.4 03/27/12 ip=192.168.1.160 latency=0 link=yes multicast=yes port=MII speed=1Gbit/s
+                resources: irq:18 ioport:e000(size=256) memory:dfe04000-dfe04fff memory:dfe00000-dfe03fff
+        *-usb:0
+             description: USB controller
+             product: NM10/ICH7 Family USB UHCI Controller #1
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:23 ioport:f0a0(size=32)
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 5.3.8-arch1-1 uhci_hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 5.03
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12Mbit/s
+        *-usb:1
+             description: USB controller
+             product: NM10/ICH7 Family USB UHCI Controller #2
+             vendor: Intel Corporation
+             physical id: 1d.1
+             bus info: pci@0000:00:1d.1
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:19 ioport:f080(size=32)
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 5.3.8-arch1-1 uhci_hcd
+                physical id: 1
+                bus info: usb@3
+                logical name: usb3
+                version: 5.03
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12Mbit/s
+        *-usb:2
+             description: USB controller
+             product: NM10/ICH7 Family USB UHCI Controller #3
+             vendor: Intel Corporation
+             physical id: 1d.2
+             bus info: pci@0000:00:1d.2
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:18 ioport:f060(size=32)
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 5.3.8-arch1-1 uhci_hcd
+                physical id: 1
+                bus info: usb@4
+                logical name: usb4
+                version: 5.03
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12Mbit/s
+        *-usb:3
+             description: USB controller
+             product: NM10/ICH7 Family USB UHCI Controller #4
+             vendor: Intel Corporation
+             physical id: 1d.3
+             bus info: pci@0000:00:1d.3
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: uhci bus_master
+             configuration: driver=uhci_hcd latency=0
+             resources: irq:16 ioport:f040(size=32)
+           *-usbhost
+                product: UHCI Host Controller
+                vendor: Linux 5.3.8-arch1-1 uhci_hcd
+                physical id: 1
+                bus info: usb@5
+                logical name: usb5
+                version: 5.03
+                capabilities: usb-1.10
+                configuration: driver=hub slots=2 speed=12Mbit/s
+        *-usb:4
+             description: USB controller
+             product: NM10/ICH7 Family USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: 1d.7
+             bus info: pci@0000:00:1d.7
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm debug ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=0
+             resources: irq:23 memory:dff01000-dff013ff
+           *-usbhost
+                product: EHCI Host Controller
+                vendor: Linux 5.3.8-arch1-1 ehci_hcd
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 5.03
+                capabilities: usb-2.00
+                configuration: driver=hub slots=8 speed=480Mbit/s
+        *-pci:2
+             description: PCI bridge
+             product: 82801 Mobile PCI Bridge
+             vendor: Intel Corporation
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: e2
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci subtractive_decode bus_master cap_list
+        *-isa
+             description: ISA bridge
+             product: NM10 Family LPC Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master cap_list
+             configuration: driver=lpc_ich latency=0
+             resources: irq:0
+        *-storage
+             description: SATA controller
+             product: NM10/ICH7 Family SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: 1f.2
+             bus info: pci@0000:00:1f.2
+             version: 02
+             width: 32 bits
+             clock: 66MHz
+             capabilities: storage msi pm ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:26 ioport:f0f0(size=8) ioport:f0e0(size=4) ioport:f0d0(size=8) ioport:f0c0(size=4) ioport:f020(size=16) memory:dff00000-dff003ff
+        *-serial
+             description: SMBus
+             product: NM10/ICH7 Family SMBus Controller
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: irq:19 ioport:f000(size=32)

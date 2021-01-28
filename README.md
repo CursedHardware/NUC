@@ -1,0 +1,5 @@
+# NUC Notes
+
+- [GPD/GPD-WIN2](LENOVO/GPD-WIN2)
+- [LENOVO/ThinkCentre](LENOVO/ThinkCentre.md)
+- [UNKNOWN/N2800](UNKNOWN/N2800)
